@@ -1,0 +1,26 @@
+﻿<Window x:Class="Project10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project10"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Image Opacity="{Binding ElementName=sld, Path=Value, Mode=TwoWay}" HorizontalAlignment="Left" Height="289" Grid.Row="1" VerticalAlignment="Top" Width="792" Source="Resources/1400105.jpg" Stretch="Fill"/>
+
+        <Grid  Background="#bae3e8"/>
+        <Grid Grid.Row="2"  Background="#445c93"/>
+        <Image Source="Resources/1599833816_2.jpg" HorizontalAlignment="Left" />
+        <TextBlock Text="Header" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="BtnBack" Content="Back" HorizontalAlignment="Right" Width="175" Height="30" Margin="5" Click="BtnBack_Click"/>
+        <Frame x:Name="MainFraim" Grid.Row="1" ContentRendered="MainFraim_ContentRendered" NavigationUIVisibility="Hidden"/>
+        <Label Content="Visability" HorizontalAlignment="Left" Margin="598,243,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#FFF3F1F1"/>
+        <Slider TickFrequency="0.05" Value="0" Minimum="0" Maximum="1" HorizontalAlignment="Left" Margin="482,221,0,0" Grid.Row="1" VerticalAlignment="Top" Height="58" Width="300" Name="sld"/>
+    </Grid>
+</Window>
